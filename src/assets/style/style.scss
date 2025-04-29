@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
+body {
+    margin: 0;
+}
+* {
+    box-sizing: border-box;
+    font-family: "JetBrains Mono";
+    line-height: 1.2;
+}
+.game {
+    margin: 0 auto;
+    max-width: 900px;
+    width: 100%;
+    padding: 30px 10px;
+    &-title {
+        font-size: 32px;
+        text-align: center;
+        font-weight: 900;
+        text-transform: uppercase;
+    }
+    &-timer {
+        margin-top: 10px;
+        text-align: center;
+        font-size: 18px;
+    }
+    &-username {
+        margin-top: 10px;
+        font-size: 24px;
+        color: lightcoral;
+        text-align: center;
+    }
+    &-board {
+        margin: 10px auto;
+        max-width: 153px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1px;
+        &__square {
+            height: 50px;
+            background: transparent;
+            border: 1px solid lightcoral;
+            border-radius: 3px;
+            cursor: pointer;
+            opacity: 1;
+            transition: all 0.3s;
+            &:hover {
+                opacity: 0.5;
+            }
+        }
+    }
+    &-restart {
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+    }
+}
